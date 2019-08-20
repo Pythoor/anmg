@@ -1,0 +1,852 @@
+/*!
+Theme Name: VisaHub Lite
+Theme URI: https://visahub.wporganic.com/visa/
+Author: easetemplate
+Author URI: https://wporganic.com/
+Description: VisaHub Lite WordPress Theme Provided Immigration, Consulting Service
+Version: 1.0.9
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: visahub-lite
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+visahub-lite is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+.main-container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.main-container.is_home_front{
+    padding-top: 60px;
+}
+/*.kc_div-structure .kc_custom{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;    
+}
+.kc_div-structure,
+.kc_custom{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;  
+}*/
+
+/** Current user **/
+.is_admin_nav{
+    margin-top: 32px;
+}
+
+/**
+ *   Blog Post common style
+ */
+.edit-link{
+    font-size: 14px;
+}
+/** Post Formate **/
+.blog-post-img,
+.post-slider, 
+.videoWrapper {
+    margin-bottom: 20px;
+}
+
+.mfp-content .mfp-title{
+    display: none;
+}
+
+
+/** Contact Form 7 **/
+.wpcf7 .screen-reader-response {
+    display: none;
+}
+.wpcf7 .wpcf7-not-valid-tip {
+    display: none;
+}
+
+.wpcf7 .wpcf7-display-none{
+    display: none;
+}
+.wpcf7 .wpcf7-response-output,
+.wpcf7 .wpcf7-validation-errors {
+    padding: 10px;
+    background: #f12a03;
+    color: #fff;
+    margin: 10px 0px;
+}
+.clearboth{
+    clear: both;
+}
+.side-widget table{
+    color: #000000;
+}
+.side-widget table {
+    margin: 20px 0;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-collapse: separate;
+    border-left: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+td,
+th {
+    padding: 0;
+}
+
+table{
+    border: 1px solid #dddddd;
+    margin-bottom: 30px; 
+    width: 100%;   
+}
+
+table th, table td {
+    padding: 8px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    vertical-align: top;
+    text-align: left;
+    line-height: 18px;    
+}
+
+ul, ol{
+    margin-bottom: 20px;
+}
+dd {
+    margin: 20px;
+}
+
+ul > li, ol > li {
+    /* padding-top: 5px; */
+}
+
+ul ul,
+ol ol{
+    padding-left: 20px;
+}
+
+.hentry ul{
+    list-style-type: square;
+}
+
+.hentry .widget ul{
+    list-style-type: none;
+}
+
+.blog-single-block .hentry ul,
+.blog-single-block .hentry ol{
+    margin-top: 0px;
+    padding-left: 30px;
+}
+
+
+/** Common Css **/
+
+blockquote {
+    font-family: 'PT Serif', serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #1c1e20;
+    padding: 10px 20px;
+    margin: 20px 0px;
+    font-size: 21px;
+    border-left: 5px solid #f12a02;
+    background-color: transparent;
+}
+
+/** video responsive **/
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+/**
+ *. Post pingback
+ */
+.pingback {
+    margin-bottom: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+    clear: both;
+}
+
+
+
+
+/** input group btn css **/
+
+.input-group-btn:last-child>.btn, 
+.input-group-btn:last-child>.btn-group{
+    margin-left: 0px;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.sticky:before {
+    font-family: 'FontAwesome';
+    content: "\f02e";
+    font-size: 30px;
+    color: #f12a03;
+    position: absolute;
+    width: 20px;
+    height: 27px;
+    top: 0px;
+    right: 20px;
+    display: block;
+}
+
+.hentry {
+}
+
+.byline,
+.updated:not(.published) {
+    display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+    margin: 0px;
+}
+
+/*--------------------------------------------------------------
+## Page links
+--------------------------------------------------------------*/ 
+.page-links {
+    clear: both;
+    font-weight: normal;
+    line-height: 2.2;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.page-links a,
+.page-links > span {
+    background: #f12a03;
+    border: 1px solid #ebebeb;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 5px;
+    color: #fff;    
+}
+.format-status .entry-content .page-links a,
+.format-gallery .entry-content .page-links a,
+.format-chat .entry-content .page-links a,
+.format-quote .entry-content .page-links a,
+.page-links a {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    color: #000000;
+}
+.format-gallery .entry-content .page-links a:hover,
+.format-audio .entry-content .page-links a:hover,
+.format-status .entry-content .page-links a:hover,
+.format-video .entry-content .page-links a:hover,
+.format-chat .entry-content .page-links a:hover,
+.format-quote .entry-content .page-links a:hover,
+.page-links a:hover {
+    background: #f12a03;
+    border: 1px solid #ebebeb;
+    color: #ffffff;
+}
+.format-status .entry-content .page-links > span,
+.format-quote .entry-content .page-links > span {
+    background: none;
+}
+.page-links .page-links-title {
+    background: transparent;
+    border: none;
+    margin-right: 20px;
+    padding: 0;
+    color: #606060;
+}
+
+/** password protected button **/
+.post-password-form input[type="submit"],
+.post-password-form input[type="button"],
+.post-password-form input[type="reset"]{
+    font-size: 16px;
+    color: #FFF;
+    border: 0.5px solid #e4b855;
+    width: 70px;
+    background: #f12a03;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+    word-wrap: break-word;
+    color: #1c1e20;
+}
+
+.bypostauthor {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+    display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+.wp-caption-text {
+    text-align: center;
+    margin: 10px 0px;
+    word-wrap: break-word;
+    word-break: break-all;    
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+    margin-bottom: 1.5em;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+}
+
+.gallery-caption {
+    display: block;
+}
+
+
+
+/** 
+ *    @media query
+ */
+
+@media (min-width: 1200px) {
+    /* col-lg-* Class */
+    .col-lg-clearboth{
+        clear: both;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* col-md-* class */
+    .col-md-clearboth{
+        clear: both;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* col-sm-* class */    
+    .col-sm-clearboth{
+        clear: both;
+    }
+    .is_admin_nav{
+        margin-top: 0px;
+    }
+    .navbar-fixed-top, .navbar-fixed-bottom{
+        position: relative;
+    }
+    .main-container.is_home_front{
+        padding-top: 50px;
+    }  
+    .blog-publish-viewer {
+        float: left;
+    }
+    .right-sidebar{
+        padding-top: 50px;
+    }
+    .call-block{
+        margin-bottom: 30px;
+    }
+    .call-block:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+
+
+.nothing-found{
+    margin-bottom: 20px;
+}
+ul.blog-content.blog-publish-dtl {
+    padding-left: 0px;
+}
+
+.user-title a{
+    color: #1c1e20;
+}
+
+#respond .form-submit{
+    margin-bottom: 30px;
+}
+#respond input{
+    height: 50px;
+}
+
+
+.comment-header .user-title{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+.wpcf7-form select {
+    height: 40px !important;
+}
+.wp-organic-gallery .portfolioFilter a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.related-post-img {
+    margin-bottom: 20px;
+}
+.related-title{
+    margin-bottom: 10px;
+}
+.related-post-content {
+    margin-bottom: 30px;
+}
+.wporganic-sidebar ul, .wporganic-footerbar ul {
+    margin-bottom: 0px;
+}
+.widget_recent_entries ul li a{
+    text-decoration: none;
+    background-color: transparent;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+}
+
+.widget_recent_entries ul li span{
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #898b8e;
+    display: inline-block;
+    width: 100%;
+    margin-left: 20px;  
+}
+
+.partner-logo{
+    filter: grayscale(1);
+}
+.partner-logo:hover{
+    filter: grayscale(0);
+}
+.author-post{
+    border: none;
+    padding: 30px 0px;
+    border-bottom: 1px dashed #e2e6ea;
+}
+.margin-auto{
+    margin: auto;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .slider .slider-text,
+    .slider-second .slider-text, 
+    .slider-third .slider-text { display: none; }
+
+    .visa-card { display: inline-block; }
+    .header-version-one a img{
+        margin-bottom: 30px;
+    }
+    #navigation-transparent.small-screen ul ul li a,
+    #navigation-transparent.small-screen ul li a{
+        background: #606467;
+        color: #ffffff;
+        padding-left: 15px;
+    }
+
+    #navigation-transparent.small-screen ul li:hover>a, 
+    #navigation-transparent.small-screen ul ul li:hover>a, 
+    #navigation-transparent.small-screen ul li.active>a,    
+    #navigation-transparent.small-screen ul ul li.active>a {
+        color: #ffffff;
+        background: #333333;
+    }
+    .error-page-image{
+        display: inline-block;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-captions{ left: 15%; }
+    .visa-card { display: inline-block; }
+    .post-block img{ margin-bottom: 20px; }
+    .author-img {
+        margin-bottom: 30px;
+    }
+    .header-version-one a img{
+        margin-bottom: 30px;
+    }
+    #navigation-transparent.small-screen ul ul li a,
+    #navigation-transparent.small-screen ul li a{
+        background: #606467;
+        color: #ffffff;
+        padding-left: 15px;
+    }
+
+    #navigation-transparent.small-screen ul li:hover>a, 
+    #navigation-transparent.small-screen ul ul li:hover>a, 
+    #navigation-transparent.small-screen ul li.active>a,    
+    #navigation-transparent.small-screen ul ul li.active>a {
+        color: #ffffff;
+        background: #333333;
+    }  
+    .error-page-image{
+        display: inline-block;
+        max-width: 100%;
+    }
+}
+
+.no-click{
+    cursor: default !important;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+@media only screen and (max-width:1400px) {
+  /*--------- index 4 --------*/
+  .about-img img { max-width: 100%; }
+
+  .slider-second .slider-captions,
+  .slider-third .slider-captions { position: absolute; bottom: 50px; }
+  .slider-second .slider-title, 
+  .slider-third .slider-title {  line-height: 46px; font-size: 36px;}
+
+
+  .parallax-section {
+    position: absolute !important;
+    top: 120px;
+    width: 33%;
+    left: 20%;
+}
+
+/*--------- index 6 --------*/
+.slider-fourth .slider-captions {
+    bottom: 100px;
+}
+}
+.service-thumb-card{
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+    .testimonial-single .t-3-arrow:after{
+        bottom: -6%;
+    }
+    .full-width-navigation,
+    .navigation-head {
+        float: none;
+    }
+    .header-transparent-second{
+        background: #333;
+        position: relative !important;
+        margin-top: 0px !important;
+    }
+    .country-service-8 {
+        margin-bottom: 40px;
+    }
+    .header-six{
+        position: relative !important;
+    }
+    .header-classic #navigation.small-screen #menu-button{
+        margin-top: 0px;
+    }
+
+    #header-six-id {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* col-xs-* class */
+    .footer-block.widget_search{
+      padding: 0px 15px;
+    }
+    .is_admin_nav {
+        margin-top: 0px;
+    }
+    .navbar-fixed-top, .navbar-fixed-bottom{
+        position: relative;
+    }
+    .main-container.is_home_front{
+        padding-top: 50px;
+    }  
+    .blog-publish-viewer {
+        float: left;
+    }
+    .pagination li a, .pagination li span{
+        margin-bottom: 30px;
+    }
+    ol#wp-organic-comment-section ol.children {
+        padding-left: 0px;
+    }
+    .right-sidebar{
+        padding-top: 50px;
+    }
+    .call-block{
+        margin-bottom: 30px;
+    }
+    .call-block:last-child{
+        margin-bottom: 0px;
+    }
+    ol#wp-organic-comment-section ol.children li{ padding: 0px; list-style: none; }
+
+    .slider-captions{
+        width: 70%;
+    }
+
+    .slider-third .slider-title,
+    .slider-second .slider-title {
+        font-size: 26px;
+    }
+
+    .slider-third .slider-captions,
+    .slider-second .slider-captions{
+        bottom: 20px;
+    }
+    #header-six-id {
+        margin-top: 0px;
+    }
+}
+
+
+.header-transparent-second{
+    padding: 10px 0px;
+}
+.comment-form-comment textarea{
+    width: 100%;
+}
+.primary-section{
+    margin-bottom: 60px;
+}
+
+.home.blog #content{
+    padding: 60px 0px;
+}

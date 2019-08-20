@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: visahub-lite/inc/visahub-lite/index.php:114
+msgid "&laquo; Previous"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/inc/template-tags.php:1
+msgid ", "
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in function
+#: visahub-lite/footer.php:30
+msgid "Copyright &copy; %1$s VisaHub Lite. All Rights Reserved."
+msgstr ""
+
+#. Text in function
+#: visahub-lite/inc/template-tags.php:1
+#: visahub-lite/template-parts/content-page.php:29
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/searchform.php:12
+msgid "GO!"
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/404.php:20
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/template-parts/content-none.php:41
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#. Text in function
+#: visahub-lite/inc/template-tags.php:1
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/inc/visahub-lite/index.php:114
+msgid "Next &raquo;"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/comments.php:67
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/inc/visahub-lite/page-header-banner.php:24
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#. Text in function
+#: visahub-lite/template-parts/content-page.php:17
+#: visahub-lite/template-parts/content.php:51
+#: visahub-lite/template-parts/content-search.php:50
+msgid "Pages:"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/inc/template-tags.php:1
+msgid "Posted in %1$s"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/footer.php:27
+msgid "Proudly powered by %s"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/template-parts/content.php:51
+#: visahub-lite/template-parts/content-search.php:50
+msgid "Read More"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/template-parts/content-none.php:15
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/searchform.php:10
+msgid "Search"
+msgstr ""
+
+#. Text in function
+#: visahub-lite/inc/visahub-lite/page-header-banner.php:45
+msgid "Search Results for: %s"
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/header.php:33
+msgid "Skip to content"
+msgstr ""
+
+#. Text in echo
+#: visahub-lite/template-parts/content-none.php:34
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#. Text in function
+#: visahub-lite/inc/template-tags.php:1
+msgid "Tagged %1$s"
+msgstr ""
